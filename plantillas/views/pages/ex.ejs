@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo</title>
+</head>
+<body>
+    <h1>Tienda</h1>
+    <p>
+      <strong>Nombre: </strong> <%=nombre%>
+    </p>
+    <p>
+      <strong>Dirección: </strong> <%=direccion%>
+    </p>
+    <p>
+      <strong>Teléfonos: </strong>
+      <ul>
+        <% for(let i=0;i<telefonos.length;i++) { %>
+          <li><%=telefonos[i]%></li>
+        <% } %>
+      </ul>
+    </p>
+  </body>
+</html>
