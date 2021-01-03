@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task APP</title>
+</head>
+<body>
+    <h1>Tareas</h1>
+    <form action="/agregar-tarea" method="POST">
+        <p>
+            <label for="descripcion">Nueva tarea:</label>
+            <input type="text" name="descripcion">
+            <button type="submit">Agregar</button>
+        </p>
+    </form>
+    <hr>
+    <ul>
+        <% for(let i=0;i<tareas.length;i++){ %>
+            <li>
+                <a href="actualizar-form?id=<%=tareas[i].idtareas%>"><%=tareas[i].descripcion%></a>
+                [<a href="eliminar-tarea?id=<%=tareas[i].idtareas%>" onclick="return confirm('Esta seguro que desea eliminar la tarea?')">X</a>]
+                <br>
+                Recursos:
+                <ol>
+                    <li>a</li>
+                    <li>b</li>
+                </ol>
+            </li>
+        <% } %>
+    </ul>
+</body>
+</html>
